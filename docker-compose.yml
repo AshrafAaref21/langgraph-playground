@@ -1,0 +1,7 @@
+services:
+  research_assistant:
+    build: .
+    env_file:
+      - .env
+    environment:
+      ANONYMIZED_TELEMETRY: "False"

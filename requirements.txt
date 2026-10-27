@@ -1,0 +1,10 @@
+# LangChain and LangGraph
+langchain
+langchain-classic
+langchain-chroma
+langgraph
+langchain-text-splitters
+
+# OpenAI model integration and .env configuration
+langchain-openai
+python-dotenv
