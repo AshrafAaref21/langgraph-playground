@@ -18,6 +18,9 @@ install:
 research_assistant:
 	$(PYTHON) manage.py research_assistant
 
+exercise_first_langgraph:
+	$(PYTHON) manage.py exercise_first_langgraph
+
 docker-build:
 	docker compose build
 
