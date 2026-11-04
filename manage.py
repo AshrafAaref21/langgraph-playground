@@ -12,7 +12,12 @@ def main():
     parser = argparse.ArgumentParser(description="Run project commands.")
     parser.add_argument(
         "command",
-        choices=["research_assistant", "exercise_first_langgraph", "first_workflow"],
+        choices=[
+            "research_assistant",
+            "exercise_first_langgraph",
+            "first_workflow",
+            "multi_agent_research_system",
+        ],
         help="Command to run.",
     )
     args = parser.parse_args()
@@ -25,6 +30,10 @@ def main():
         from langgraph_examples.first_workflow import demo_conversation
 
         demo_conversation()
+    elif args.command == "multi_agent_research_system":
+        from multi_agent_research_system.demo import demo_full_research
+
+        demo_full_research()
 
 
 if __name__ == "__main__":
