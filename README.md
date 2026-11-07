@@ -10,6 +10,7 @@ Small, runnable Python examples for learning LangChain and LangGraph patterns. T
 | Conversation workflow | A stateful graph that classifies sentiment and generates a response | `python manage.py first_workflow` |
 | AI research assistant | Document ingestion, vector retrieval, conversational memory, and structured answers | `python manage.py research_assistant` |
 | Multi-agent research system | Parallel research, synthesis, report writing, and iterative quality review | `python manage.py multi_agent_research_system` |
+| Production API | A standalone FastAPI service that wraps a LangGraph agent with rate limiting, caching, security checks, and metrics | See [production-api](./production-api/README.md) |
 
 ## Requirements
 
@@ -105,9 +106,16 @@ multi_agent_research_system/
   graph.py                   Graph construction and routing
   models.py                  Chat model configuration
   state.py                   Graph state definitions
+production-api/              Standalone FastAPI + LangGraph service (Python 3.12)
 manage.py                    Command-line entry point
 requirements.txt             Python dependencies
 ```
+
+## Production API
+
+The service is an independent project with its own dependencies, lock file, Docker setup, tests, and deployment configuration. It requires Python 3.12 and `uv`; the root `requirements.txt` does not install its dependencies.
+
+See the [production API README](./production-api/README.md) for setup, configuration, local run instructions, endpoints, tests, and deployment details.
 
 ## Make targets
 
